@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Формы</title>
+    </head>
+    <body>
+    	<form>
+            <h2>Укажите пол</h2>
+            <p>
+                <input type="radio" value="man" checked name="gender"/>мужской
+            </p>
+            <p>
+                <input type="radio" value="woman" name="gender"/>женский
+            </p>
+            <h2>Выберите технологию</h2>
+            <p>
+                <input type="radio" value="html5" checked name="tech"/>HTML5
+            </p>
+            <p>
+                <input type="radio" value="net" name="tech"/>.NET
+            </p>
+            <p>
+                <input type="radio" value="java" name="tech"/>Java
+            </p>
+            <p>
+                <button type="submit">Отправить</button>
+            </p>
+        </form>
+        <label for="favcolor">Chose</label>
+        <input type="color" id="favcolor" name="favcolor" list="colors">
+        <datalist id="colors">
+            <option value="#0000FF" label="blue"/>
+            <option value="#008000" label="green"/>
+            <option value="#ff0000" label="red"/>
+        </datalist>
+        <form enctype="multipart/form-data" method="post" action="hello2.html">
+            <p><input type="file" name="file" multiple/></p>
+            <p><input type="submit" value="send" ></p>
+        </form>
+        <form method="get">
+            <p>
+                <label for="phone">Выберите модель:</label>
+             
+                <select id="phone" name="phone">
+                    <optgroup label="Apple">
+                        <option value="iphone 6s">iPhone 6S</option>
+                        <option value="iphone 6s plus">iPhone 6S Plus</option>
+                        <option value="iphone 5se">iPhone 5SE</option>
+                    </optgroup>
+                    <optgroup label="Microsoft">
+                        <option value="lumia 950">Lumia 950</option>
+                        <option value="lumia 950 xl">Lumia 950 XL</option>
+                        <option value="lumia 650">Lumia 650</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Отправить" />
+            </p>
+        </form>
+        <form method="get">
+            <p>
+                <label for="comment">Оставьте ваш комментарий</label><br>
+                <textarea name="comment" id="comment" placeholder="Не более 200 символов" maxlength="200" cols="30" rows="7"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Добавить" />
+            </p>
+        </form>
+        <form method="get" novalidate>
+            <p>
+                <label for="login">Оставьте ваш Login</label><br>
+                <input type="number" required id="login" name="login" min="1" max="10">
+            </p>
+            <p>
+                <input type="submit" value="Добавить" formnovalidate />
+            </p>
+        </form>
+        <h2>Вход на сайт</h2>
+        <form>
+            <fieldset>
+                <legend>Введите данные</legend>
+                <label for="login">Логин</label><br>
+                <input type="text" name="login" id="login"/><br>
+                <label for="password">Пароль</label><br>
+                <input type="password" name="password" id="password"/><br>
+                <input type="submit" value="Авторизация" /><br>
+            </fieldset>
+        </form>
+
+        
+    </body>
+</html>
